@@ -131,9 +131,3 @@ https://youtu.be/g8pR5N3bJec
 | **Nov. 2025**        | **Complete (Prototype)** |
 
 ---
-
-If you want, I can also:
-
-✅ Add badges (Unity version, license, platform)
-✅ Add screenshots or GIF previews
-Just tell me!
