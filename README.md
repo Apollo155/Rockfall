@@ -119,7 +119,7 @@ Contributions are welcome!
 ## **Project Showcase**
 
 *Gameplay preview video:*
-https://youtu.be/g8pR5N3bJec
+https://youtu.be/zhEeZf4Nsk4?si=hnXLhkFsTLse0i2K
 
 ---
 
