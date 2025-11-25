@@ -21,7 +21,6 @@ The longer you survive, the higher your score.
 * 🚀 Smooth 3D spaceship movement
 * 🪨 Randomized falling asteroids
 * 🔫 Shooting system (bullets destroy asteroids)
-* ⭐ Score system based on survival
 * 🎧 Sound effects and basic VFX
 * 🧩 Beginner-friendly Unity project structure
 * 🖥️ Optimized for performance (prototype level)
