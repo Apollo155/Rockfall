@@ -46,7 +46,7 @@ The longer you survive, the higher your score.
 * **Fire Button →** Shoot bullets at asteroids
 * **Menu Button →** Pause / Return to menu
 * **New Game Button →** Start a new game
-* **Invincible Checkbox →** Make the spaceship invincible *(testing only)*
+
 
 ---
 
