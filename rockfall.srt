@@ -1,0 +1,412 @@
+1
+00:00:00,366 --> 00:00:01,433
+uh hello
+
+2
+00:00:01,433 --> 00:00:02,100
+so today
+
+3
+00:00:02,100 --> 00:00:04,200
+I'll be demonstrating how we began
+
+4
+00:00:04,200 --> 00:00:08,100
+building our 3D space shooter game called rockfall
+
+5
+00:00:08,100 --> 00:00:09,166
+using unity
+
+6
+00:00:09,700 --> 00:00:12,733
+in the space we focused on creating the project
+
+7
+00:00:12,800 --> 00:00:15,900
+importing assets building the spaceship
+
+8
+00:00:16,33 --> 00:00:18,933
+setting up the camera follow system
+
+9
+00:00:19,233 --> 00:00:20,733
+placing the space station
+
+10
+00:00:20,800 --> 00:00:22,0
+adding the skybox
+
+11
+00:00:22,0 --> 00:00:26,66
+and preparing the UI canvas for future controls
+
+12
+00:00:26,666 --> 00:00:28,466
+ah so let's begin
+
+13
+00:01:09,833 --> 00:01:11,666
+first we open uh
+
+14
+00:01:11,666 --> 00:01:17,733
+Unity Hub and create a new project named Rockfall Game
+
+15
+00:01:17,833 --> 00:01:19,600
+with a 3D template
+
+16
+00:01:24,600 --> 00:01:26,200
+when the project loaded
+
+17
+00:01:26,233 --> 00:01:28,533
+we immediately saved the scene as main
+
+18
+00:01:30,33 --> 00:01:32,866
+as main as you can see inside the asset folder
+
+19
+00:01:35,400 --> 00:01:35,866
+uh next
+
+20
+00:01:35,866 --> 00:01:39,366
+we imported the unity package containing the 3d models
+
+21
+00:01:39,500 --> 00:01:41,200
+textures sounds
+
+22
+00:01:42,700 --> 00:01:45,700
+and other resources needed for the game
+
+23
+00:01:47,300 --> 00:01:49,300
+so after importing the assets
+
+24
+00:01:49,300 --> 00:01:52,66
+we started building our first game object
+
+25
+00:01:52,66 --> 00:01:53,400
+named the spaceship
+
+26
+00:02:01,766 --> 00:02:03,300
+or sheep
+
+27
+00:02:05,0 --> 00:02:09,500
+we went uh we renamed it renamed it as sheep
+
+28
+00:02:09,800 --> 00:02:12,300
+then from the models folder we drag
+
+29
+00:02:14,200 --> 00:02:16,266
+the ship model under the ship object
+
+30
+00:02:16,266 --> 00:02:17,866
+which made it a child
+
+31
+00:02:19,300 --> 00:02:20,900
+we renamed this child
+
+32
+00:02:22,566 --> 00:02:24,66
+object graphics
+
+33
+00:02:25,166 --> 00:02:27,266
+we reset the graphics object position
+
+34
+00:02:27,266 --> 00:02:30,66
+so it aligned perfectly with the invisible
+
+35
+00:02:30,66 --> 00:02:31,533
+parent ship object
+
+36
+00:02:43,633 --> 00:02:47,66
+uh next we wanted the camera to follow
+
+37
+00:02:49,966 --> 00:02:51,366
+to follow the ship smoothly
+
+38
+00:02:51,366 --> 00:02:53,866
+rather than being parented directly to it
+
+39
+00:02:53,900 --> 00:02:57,566
+we added a new script to the main camera called Smooth
+
+40
+00:02:57,566 --> 00:02:58,766
+Follow that CS
+
+41
+00:02:59,900 --> 00:03:02,333
+this script calculates a position behind
+
+42
+00:03:02,433 --> 00:03:04,166
+behind and above the spaceship
+
+43
+00:03:04,166 --> 00:03:04,500
+then
+
+44
+00:03:04,500 --> 00:03:08,400
+smoothly interpolates the camera toward that position
+
+45
+00:03:08,400 --> 00:03:09,300
+every frame
+
+46
+00:03:10,966 --> 00:03:13,300
+we assigned the ship object to
+
+47
+00:03:13,300 --> 00:03:13,866
+the scripts
+
+48
+00:03:13,866 --> 00:03:16,733
+target field and adjusted values like height
+
+49
+00:03:16,833 --> 00:03:18,500
+distance and damping
+
+50
+00:03:19,200 --> 00:03:21,166
+when we tested the game the camera
+
+51
+00:03:25,366 --> 00:03:28,400
+followed the ship smoothly with a natural delay
+
+52
+00:03:28,400 --> 00:03:29,566
+making the gameplay
+
+53
+00:03:29,633 --> 00:03:33,100
+gameplay feel more dynamic and realistic
+
+54
+00:03:37,300 --> 00:03:39,400
+next we place the space station
+
+55
+00:03:39,600 --> 00:03:42,266
+with which the player will protect later in the game
+
+56
+00:03:42,266 --> 00:03:44,266
+we created another empty game object
+
+57
+00:03:44,266 --> 00:03:46,366
+named Space Station
+
+58
+00:04:10,433 --> 00:04:14,0
+we reset the model's position so it aligned properly
+
+59
+00:04:14,100 --> 00:04:15,500
+we checked the station model
+
+60
+00:04:15,500 --> 00:04:18,933
+and confirmed that it already contained mesh colliders
+
+61
+00:04:20,633 --> 00:04:22,266
+uh which were automatically
+
+62
+00:04:22,266 --> 00:04:24,466
+generated when importing the asset
+
+63
+00:04:25,566 --> 00:04:28,266
+so to make the game feel like outer space
+
+64
+00:04:30,366 --> 00:04:34,566
+we replace Unity's default Skybox with our space Skybox
+
+65
+00:04:34,566 --> 00:04:38,66
+we created a new material name Skybox
+
+66
+00:04:38,66 --> 00:04:41,766
+and change it shader to Skybox 6 sided
+
+67
+00:04:46,0 --> 00:04:47,966
+then we assign the six texture
+
+68
+00:04:49,633 --> 00:04:52,366
+ah images to their correct sides front back
+
+69
+00:04:52,366 --> 00:04:54,200
+left right and up and down
+
+70
+00:04:54,200 --> 00:04:56,766
+finally we open up the lighting settings
+
+71
+00:04:56,766 --> 00:04:59,66
+and assign this Skybox material
+
+72
+00:05:01,166 --> 00:05:04,166
+the environment instantly looked like deep space
+
+73
+00:05:04,800 --> 00:05:07,400
+and the objects even received a green tint
+
+74
+00:05:07,400 --> 00:05:09,866
+based on their reflections on the sky
+
+75
+00:05:11,600 --> 00:05:15,100
+so for the last step in this space uh
+
+76
+00:05:15,100 --> 00:05:19,0
+space was setting up the UI canvas for controls
+
+77
+00:05:23,300 --> 00:05:24,800
+ah we created a canvas
+
+78
+00:05:24,800 --> 00:05:28,666
+which automatically generated an event system
+
+79
+00:05:28,700 --> 00:05:31,200
+we changed the canvas render mode to screen
+
+80
+00:05:31,200 --> 00:05:32,766
+space camera
+
+81
+00:05:37,33 --> 00:05:37,166
+uh
+
+82
+00:05:37,166 --> 00:05:40,866
+assign the main camera and set the plane distance to 1
+
+83
+00:05:42,600 --> 00:05:46,0
+we also change uh UA scale mode mode
+
+84
+00:05:48,300 --> 00:05:50,466
+to scale with screen size
+
+85
+00:05:50,466 --> 00:05:53,33
+and set the reference resolution to
+
+86
+00:05:53,33 --> 00:05:55,900
+1280 X 7 20
+
+87
+00:05:55,900 --> 00:05:58,600
+which is ideal for mobile controls
+
+88
+00:05:59,700 --> 00:06:01,866
+this canvas will later hold on
+
+89
+00:06:01,866 --> 00:06:03,600
+hold the on screen joystick
+
+90
+00:06:03,600 --> 00:06:06,533
+and fire button for controlling the ship
+
+91
+00:06:08,566 --> 00:06:10,800
+and that completes the first development stage
+
+92
+00:06:10,800 --> 00:06:12,766
+for a space shooter game Rockford
+
+93
+00:06:15,100 --> 00:06:17,966
+now I'll be demonstrating on how
+
+94
+00:06:19,266 --> 00:06:21,766
+it works in mobile app
+
+95
+00:06:24,600 --> 00:06:26,733
+so start we start a new game
+
+96
+00:06:29,266 --> 00:06:30,666
+these are the controls
+
+97
+00:06:31,833 --> 00:06:32,966
+a pause button
+
+98
+00:06:33,866 --> 00:06:34,666
+and
+
+99
+00:06:36,866 --> 00:06:38,966
+so for the
+
+100
+00:06:41,66 --> 00:06:43,100
+space station it's right there
+
+101
+00:06:43,100 --> 00:06:48,66
+and the asteroids are going straight at it
+
+102
+00:06:48,66 --> 00:06:49,600
+so you can shoot at it
+
+103
+00:06:56,66 --> 00:06:59,0
+so that's it for the rockfall game
+
